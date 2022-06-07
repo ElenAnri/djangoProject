@@ -1,0 +1,75 @@
+{% extends 'classicalmusic/base.html' %}
+{% load static i18n %}
+{% block title %} {{composer.name}} {% endblock title %}
+{% block composer %}
+<div class="left-ads-display col-lg-8">
+    <div class="row">
+        <div class="desc1-left col-md-6">
+            <img src="{{ composer.photo.url }}" class="img-fluid" alt="">
+        </div>
+        <div class="desc1-right col-md-6 pl-lg-4">
+            <h5 class="editContent" style="outline: none; cursor: inherit;">
+                {{ composer.name }}</h5>
+            <li style="list-style: none"><span><b>{% trans  'Место и дата рождения' %}:</b><br> {{ composer.placeOfBirth }}, {{ composer.dateOfBirth }}</span></li>
+            <li style="list-style: none"><span><b>{% trans  'Место и дата смерти' %}:</b><br> {{ composer.placeOfDeath }}, {{ composer.dateOfDeath }}</span></li>
+            <li style="list-style: none"><span><b>{% trans  'Страна' %}:</b> {{ composer.country}}</span></li>
+            <li style="list-style: none"><span><b>{% trans  'Эпоха' %}:</b>
+                {{ composer.eras.name }}</span>
+            </li>
+            <li style="list-style: none"><span><b>{% trans  'Жанры' %}:</b>
+                {% for pieceofart in composer.pieceofart_set.all %}
+                    {% for genre in pieceofart.genres.all %}
+                        {{ genre.name }}
+                    {% endfor %}
+                {% endfor %}
+            </span></li>
+            <div class="share-desc">
+                <div class="share">
+                    <h4 class="editContent"
+                        style="outline: none; cursor: inherit;">
+                        Share:</h4>
+                    <ul class="w3layouts_social_list list-unstyled">
+                        <li>
+                            <a href="#" class="w3pvt_facebook editContent"
+                               style="outline: none; cursor: inherit;">
+                                <span class="fa fa-facebook-f"
+                                      style="outline: none; cursor: inherit;"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="w3pvt_twitter editContent"
+                               style="outline: none; cursor: inherit;">
+                                <span class="fa fa-twitter"
+                                      style="outline: none; cursor: inherit;"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="w3pvt_dribble editContent"
+                               style="outline: none; cursor: inherit;">
+                                <span class="fa fa-dribbble"
+                                      style="outline: none; cursor: inherit;"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+     <div class="row sub-para-w3layouts mt-5">
+         <h3 class="shop-sing editContent" style="outline: none; cursor: inherit;">
+             {% trans  'О копмозиторе' %} {{ composer.name }}</h3><br>
+         <p class="editContent" style="outline: none; cursor: inherit;">{{ composer.description }}</p>
+     </div>
+    <h3 class="shop-sing editContent" style="outline: none; cursor: inherit;">
+             {% trans  'Произведения' %}</h3><br>
+                        <p class="editContent" style="outline: none; cursor: inherit;"><span>
+             {% for pieceofart in composer.pieceofart_set.all %}
+                         <a href=" {{ pieceofart.get_absolute_url }} " class="editContent" >
+                             {{ pieceofart.name }}
+                         </a>
+             {% endfor %}
+          </span></p>
+</div>
+    <hr>
+{% endblock composer %}

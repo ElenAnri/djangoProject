@@ -1,0 +1,35 @@
+{% extends 'classicalmusic/base.html' %}
+{% load static i18n %}
+{% block title %} {{ pieceofart.name }} {% endblock title %}
+{% block composer %}
+<div class="left-ads-display col-lg-8">
+    <div class="row">
+        <div class="desc1-left col-md-6">
+            <img src="{{ pieceofart.photo.url }}" class="img-fluid" alt="">
+        </div>
+        <div class="desc1-right col-md-6 pl-lg-4">
+            <h5 class="editContent" style="outline: none; cursor: inherit;">
+                {{ pieceofart.name }}</h5>
+            <li style="list-style: none"><span><b>{% trans  'Композитор' %}:</b> {{ pieceofart.composer }}</span></li>
+            <li style="list-style: none"><span><b>{% trans  'Дата премьеры' %}:</b> {{ pieceofart.dateOfWrite }}</span></li>
+            <li style="list-style: none"><span><b>{% trans  'Жанр' %}:</b> {% for genre in pieceofart.genres.all %}
+                        {{ genre.name }}
+                    {% endfor %}</span></li>
+        </div>
+    </div>
+     <div class="row sub-para-w3layouts mt-5">
+         <h3 class="shop-sing editContent" style="outline: none; cursor: inherit;">
+             {% trans  'О произведении' %} {{ pieceofart.name }}</h3><br>
+         <p class="editContent" style="outline: none; cursor: inherit;">{{ pieceofart.description }}</p>
+     </div>
+<p class="editContent" style="outline: none; cursor: inherit;"><span>
+             {% for per in pieceofart.perfomance_set.all %}
+                         <a href=" {{ per.get_absolute_url }} " class="editContent" >
+                             {{ per.country }},  {{ per.dateOfPlay }}
+                         </a>
+             {% endfor %}
+          </span></p>
+</div>
+    <hr>
+</div>
+{% endblock composer %}
