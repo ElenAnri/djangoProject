@@ -55,7 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'########
+#CRISPY_TEMPLATE_PACK = 'bootstrap4'########
 ROOT_URLCONF = 'djangoProject.urls'
 
 TEMPLATES = [
