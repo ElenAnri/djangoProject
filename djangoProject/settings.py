@@ -45,7 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -55,6 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'########
 ROOT_URLCONF = 'djangoProject.urls'
 
 TEMPLATES = [
@@ -139,6 +140,10 @@ LANGUAGE_COOKIE_NAME = 'cookie_language_classicalmusic'
 STATIC_URL = '/static/'
 STATIC_DIR = os.path.join(BASE_DIR, 'Group/../static')
 STATICFILES_DIRS = [STATIC_DIR]
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'####
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))####
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')####
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
