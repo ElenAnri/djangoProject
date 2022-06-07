@@ -6,13 +6,13 @@ ENV PYTHONUNBUFFERED 1
 #WORKDIR ../djangoProject
 ##WORKDIR /usr/src/djangoProject
 #WORKDIR D:/PycharmProjects/djangoProject
-##COPY  ./Group/req.txt /usr/src/req.txt
+##COPY  ./Group/requirements.txt /usr/src/requirements.txt
 #RUN install --upgrade pip
-#COPY ./Group/req.txt .
-#COPY ./Group/req.txt C:/PycharmProjects/req.txt
-#RUN pip install -r C:/Users/helen/PycharmProjects/req.txt
-##RUN pip install -r /usr/src/req.txt
-#RUN pip install --upgrade pip && pip install -r req.txt
+#COPY ./Group/requirements.txt .
+#COPY ./Group/requirements.txt C:/PycharmProjects/requirements.txt
+#RUN pip install -r C:/Users/helen/PycharmProjects/requirements.txt
+##RUN pip install -r /usr/src/requirements.txt
+#RUN pip install --upgrade pip && pip install -r requirements.txt
 #ADD . /web_django/
 #COPY . D:/PycharmProjects/djangoProject
 ##COPY . /usr/src/djangoProject
@@ -20,24 +20,24 @@ ENV PYTHONUNBUFFERED 1
 
 
 #WORKDIR C:/Users/helen/PycharmProjects/djangoProject
-#COPY  ./req.txt C:/Users/helen/PycharmProjects/djangoProject/req.txt
-#RUN pip install -r C:/Users/helen/PycharmProjects/djangoProject/req.txt
+#COPY  ./requirements.txt C:/Users/helen/PycharmProjects/djangoProject/requirements.txt
+#RUN pip install -r C:/Users/helen/PycharmProjects/djangoProject/requirements.txt
 #COPY . C:/Users/helen/PycharmProjects/djangoProject
 
 #WORKDIR C:/Users/helen/PycharmProjects/djangoProject
-#COPY  C:/Users/helen/PycharmProjects/djangoProject/req.txt .
-#RUN pip install -r req.txt
+#COPY  C:/Users/helen/PycharmProjects/djangoProject/requirements.txt .
+#RUN pip install -r requirements.txt
 #COPY . C:/Users/helen/PycharmProjects/djangoProject
 
 #WORKDIR ../djangoProject
-#COPY  ./req.txt .
-#RUN pip install -r req.txt
+#COPY  ./requirements.txt .
+#RUN pip install -r requirements.txt
 #COPY ../djangoProject .
 
 
 WORKDIR /app
 ADD . /app
-RUN pip install -r req.txt
+RUN pip install -r requirements.txt
 #COPY ../djangoProject .
 
 #EXPOSE 8000
