@@ -4,7 +4,7 @@ from . import views
 
 
 urlpatterns = [
-    path("", views.ComposerView.as_view()),
+    path(""),
     path("composer/", views.ComposerView.as_view()),
     path("composer/<slug:slug>/", views.ComposerDetailView.as_view(), name="composer_detail"),
     path("composer/<slug:parent>/<slug:slug>/", views.PieceOfArtDetailView.as_view(), name="pieceOfArt_detail"),
