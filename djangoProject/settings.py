@@ -131,7 +131,7 @@ LANGUAGES = (
 
 
 LOCALE_PATHS = (
-    os.path.join(BASE_DIR, 'Group/../locale'),
+    os.path.join(BASE_DIR, './locale'),
 )
 
 LANGUAGES_SESSION_KEY = 'session_language_classicalmusic'
