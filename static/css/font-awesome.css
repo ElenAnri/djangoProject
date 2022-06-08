@@ -554,6 +554,10 @@
 .fa-facebook-square:before {
   content: "\f082";
 }
+
+.fa-vk-square:before {
+  content: "\f189";
+}
 .fa-camera-retro:before {
   content: "\f083";
 }
@@ -625,6 +629,12 @@
 .fa-facebook:before {
   content: "\f09a";
 }
+
+.fa-vk-f:before,
+.fa-vk:before {
+  content: "\f189";
+}
+
 .fa-github:before {
   content: "\f09b";
 }

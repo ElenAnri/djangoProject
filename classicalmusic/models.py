@@ -61,6 +61,7 @@ class Composer(models.Model):
     )
     url = models.SlugField(max_length=160, unique=True)
     draft = models.BooleanField("Черновик", default=False)
+    wikiurl = models.CharField("СсылкаВики", max_length=150, default="")
 
     def __str__(self):
         return self.name

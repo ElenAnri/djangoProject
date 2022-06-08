@@ -26,6 +26,7 @@ urlpatterns = [
 ]
 
 urlpatterns += i18n_patterns(
+    #path('accounts/', include('allauth.urls')),
     path("", include("classicalmusic.urls")),
 )
 if settings.DEBUG:
