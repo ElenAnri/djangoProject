@@ -1,0 +1,149 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-08 18:51+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\templates\classicalmusic\composer_detail.html:13
+msgid "Место и дата рождения"
+msgstr "장소 및 생년월일"
+
+#: .\templates\classicalmusic\composer_detail.html:14
+msgid "Место и дата смерти"
+msgstr "사망 장소 및 날짜"
+
+#: .\templates\classicalmusic\composer_detail.html:15
+#: .\templates\classicalmusic\perfomance_detail.html:22
+msgid "Страна"
+msgstr "국가"
+
+#: .\templates\classicalmusic\composer_detail.html:16
+msgid "Эпоха"
+msgstr "시대"
+
+#: .\templates\classicalmusic\composer_detail.html:19
+msgid "Жанры"
+msgstr "장르"
+
+#: .\templates\classicalmusic\composer_detail.html:61
+msgid "О копмозиторе"
+msgstr "콥모사이터 소개"
+
+#: .\templates\classicalmusic\composer_detail.html:65
+msgid "Произведения"
+msgstr "작품"
+
+#: .\templates\classicalmusic\composer_list.html:3
+msgid "Шедевры классической музыки"
+msgstr "클래식 음악의 걸작"
+
+#: .\templates\classicalmusic\perfomance_detail.html:8
+msgid "Видео не поддерживается"
+msgstr "비디오는 지원되지 않습니다"
+
+#: .\templates\classicalmusic\perfomance_detail.html:13
+msgid "Исполнители"
+msgstr "출연자"
+
+#: .\templates\classicalmusic\perfomance_detail.html:19
+msgid "Год записи"
+msgstr "녹음 년도"
+
+#: .\templates\classicalmusic\perfomance_detail.html:34
+msgid "Оставить отзыв"
+msgstr "리뷰 남기기"
+
+#: .\templates\classicalmusic\perfomance_detail.html:42
+msgid "Ваш комментарий"
+msgstr "귀하의 의견"
+
+#: .\templates\classicalmusic\perfomance_detail.html:50
+msgid "Имя"
+msgstr "이름"
+
+#: .\templates\classicalmusic\perfomance_detail.html:64
+msgid "Отправить"
+msgstr "보내기"
+
+#: .\templates\classicalmusic\pieceOfArt_detail.html:13
+msgid "Композитор"
+msgstr "작곡가"
+
+#: .\templates\classicalmusic\pieceOfArt_detail.html:14
+msgid "Дата премьеры"
+msgstr "프리미어 날짜"
+
+#: .\templates\classicalmusic\pieceOfArt_detail.html:15
+msgid "Жанр"
+msgstr "장르"
+
+#: .\templates\classicalmusic\pieceOfArt_detail.html:22
+msgid "О произведении"
+msgstr "작업에 대해"
+
+#: .\templates\include\header.html:52
+msgid "шедевры классической музыки"
+msgstr "클래식 음악의 걸작"
+
+#: .\templates\include\header.html:53
+msgid "Великие компзиторы"
+msgstr "훌륭한 컴포지터"
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:7
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:221
+msgid "The install worked successfully! Congratulations!"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:207
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:222
+#, python-format
+msgid ""
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
+"\">DEBUG=True</a> is in your settings file and you have not configured any "
+"URLs."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:230
+msgid "Django Documentation"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:231
+msgid "Topics, references, &amp; how-to’s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:239
+msgid "Tutorial: A Polling App"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:240
+msgid "Get started with Django"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:248
+msgid "Django Community"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:249
+msgid "Connect, get help, or contribute"
+msgstr ""
