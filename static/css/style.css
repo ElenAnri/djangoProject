@@ -988,6 +988,7 @@ footer p {
 form.w3layouts-newsletter {
     display: flex;
     margin-bottom: 2.5em;
+    word-break:break-all;
 }
 
 .bottom-w3layouts-sec-nav {
@@ -995,6 +996,28 @@ form.w3layouts-newsletter {
 }
 
 .w3layouts-newsletter input[type="email"] {
+    padding: 0.6em 1em;
+    font-size: 15px;
+    color: #000;
+    letter-spacing: 2px;
+    border: none;
+    border: none;
+    flex-basis: 100%;
+    background: #efeeee;
+}
+
+.w3layouts-newsletter input[type="text"] {
+    padding: 0.6em 1em;
+    font-size: 15px;
+    color: #000;
+    letter-spacing: 2px;
+    border: none;
+    border: none;
+    flex-basis: 100%;
+    background: #efeeee;
+}
+
+.w3layouts-newsletter textarea[type="text"] {
     padding: 0.6em 1em;
     font-size: 15px;
     color: #000;

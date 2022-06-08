@@ -39,27 +39,32 @@
                     </div>
                     <div class="col-lg-8 footer-right">
                         <div class="w3layouts-news-letter">
-                            <h3 class="footer-title text-uppercase editContent mb-lg-4 mb-3" >Newsletter</h3>
+                            <h3 class="footer-title text-uppercase editContent mb-lg-4 mb-3" >Telegram</h3>
 
-                            <p class="editContent" >By subscribing to our mailing list you will always get latest news and updates from us.</p>
-                            <form action="#" method="post" class="w3layouts-newsletter">
-                                <input type="email" name="Email" class="editContent" placeholder="Enter your email..." required="" >
-                                <button class="btn1 btn" ><span class="fa fa-paper-plane-o" aria-hidden="true" ></span></button>
+                            <p class="editContent" >Обратная связь</p>
 
-                            </form>
+
+ <form name="telegram" onsubmit="submitform();return false" class="w3layouts-newsletter">
+  <div> <p>Имя: <input type="text" id="name" name="name" value="Пример: Иван Иванов" onblur="if(this.value.length == 0) this.value = 'Пример: Иван Иванов'" onfocus="if(this.value == 'Пример: Иван Иванов') this.value = '' " pattern="[A-Z][a-z]*" required maxlength="50"/> <br> <br></p></div>
+  <div> <p>E-mail: <input type="email" id="email" name="email" value="Пример: mail@ex.com" onblur="if(this.value.length == 0) this.value = 'Пример: mail@ex.com'" onfocus="if(this.value == 'Пример: mail@ex.com') this.value = '' " required minlength="8"/> <br> <br></p></div>
+<div>
+<p>Сообщение: <textarea required type = "text"  name = "msg" id="text" onblur="if(this.value.length == 0) this.value = 'Введите сообщение'" onfocus="if(this.value == 'Введите сообщение') this.value=''">Введите сообщение</textarea> <br> <br></p>
+</div>
+<button class="btn1 btn" ><span class="fa fa-paper-plane-o" aria-hidden="true" ></span></button>
+</form>
                         </div>
                         <div class="row mt-lg-4 bottom-w3layouts-sec-nav mx-0">
                             <div class="col-md-4 footer-grid_section_w3layouts">
                                 <h3 class="footer-title text-uppercase editContent mb-lg-4 mb-3" >Разделы</h3>
                                 <ul class="list-unstyled w3layouts-icons">
                                     <li>
-                                        <a href="index.html" class="editContent" >Главная</a>
+                                        <a href="" class="editContent" >Главная</a>
                                     </li>
                                     <li>
-                                        <a href="about.html" class="editContent" >Категории</a>
+                                        <!--<a href="about.html" class="editContent" >Категории</a>-->
                                     </li>
                                     <li>
-                                        <a href="contact.html" class="editContent" >Контакты</a>
+                                        <!--<a href="contact.html" class="editContent" >Контакты</a>-->
                                     </li>
                                 </ul>
                             </div>
@@ -107,3 +112,42 @@
                 </div>
             </div>
         </div>
+
+
+        <script type="text/javascript">
+
+function submitform(){
+  //console.log("test");
+  const form = document.querySelector("telegram");
+    let formData = new FormData(document.forms.telegram);
+      console.log(formData);
+    let xhr = new XMLHttpRequest();
+    let url = new URL('https://api.telegram.org/bot5284282328:AAEKzmhF-1qOoY3B75hF3RrLgc1iBJP95o4/sendMessage');
+    url.searchParams.set('chat_id', '540484916');
+    var name = document.getElementById('name');
+    var email = document.getElementById('email');
+    var text = document.getElementById('text');
+    url.searchParams.set('text', "Имя: " + name.value +"\nПочта: " + email.value +"\nСообщение:\n" + text.value);
+    xhr.open("POST", url); //
+    xhr.send();
+
+    /*xhr.onload = function() {
+      if (xhr.status != 200) {
+        alert(`Ошибка ${xhr.status}: ${xhr.statusText}`);
+    } else {
+        alert(`Готово, получили ${xhr.response.length} байт`); //}
+    };
+
+    xhr.onprogress = function(event) {
+      if (event.lengthComputable) {
+        alert(`Получено ${event.loaded} из ${event.total} байт`);
+      } else {
+        alert(`Получено ${event.loaded} байт`);
+      }
+    };
+
+    xhr.onerror = function() {
+      alert("Запрос не удался");
+    };*/
+}
+</script>
